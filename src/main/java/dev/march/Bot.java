@@ -14,10 +14,8 @@ import java.util.Map;
 
 public class Bot extends TelegramLongPollingBot {
 
-    Dotenv dotenv = Dotenv.load();
-
-    String botUsername = dotenv.get("BOT_NAME");
-    String botToken = dotenv.get("BOT_TOKEN");
+    String botUsername = System.getenv("BOT_NAME");
+    String botToken = System.getenv("BOT_TOKEN");
 
     BinanceConnector connector = new BinanceConnector();
     BinanceDataParser parser = new BinanceDataParser();
