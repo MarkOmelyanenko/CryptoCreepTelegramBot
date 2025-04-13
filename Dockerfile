@@ -15,8 +15,6 @@ WORKDIR /app
 
 COPY --from=builder /app/target/*.jar app.jar
 
-COPY .env .
-
 CMD ["java", "-jar", "app.jar"]
 
 LABEL authors="markomelyanenko"
